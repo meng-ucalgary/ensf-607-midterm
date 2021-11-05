@@ -1,3 +1,5 @@
+package midterm.client.view;
+
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
@@ -36,11 +38,11 @@ public class StringView extends JFrame {
         result.setText(res);
     }
 
-    void addStringListener(ActionListener listenForConcatButton) {
+    public void addStringListener(ActionListener listenForConcatButton) {
         concatButton.addActionListener(listenForConcatButton);
     }
 
-    void displayErrorMessage(String errorMessage) {
+    public void displayErrorMessage(String errorMessage) {
         JOptionPane.showMessageDialog(this, errorMessage);
     }
 }
