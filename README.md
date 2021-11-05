@@ -11,7 +11,7 @@ Date: 05-November-2021
 
 + Use the server script - [run_server.cmd](run_server.cmd) or [run_server.sh](run_server.sh) to launch the server. Launch the server only once. 
 
-+ If you need to shutdown the server, you must the server process either by quitting the terminal or sending stop signal.
++ If you need to shutdown the server, you must the kill server process either by quitting the terminal or sending stop signal.
 
 + Use the client script - [run_client.cmd](run_client.cmd) or [run_client.sh](run_client.sh) to launch clients. Launch as many clients as required.
 
