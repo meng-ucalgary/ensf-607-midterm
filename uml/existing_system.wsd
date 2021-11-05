@@ -1,0 +1,16 @@
+@startuml existing_system
+
+class MVCString
+class StringController
+class StringModel
+class StringView
+
+
+StringController o-- StringModel
+StringController o-- StringView
+
+MVCString *-- StringModel
+MVCString *-- StringView
+MVCString *-- StringController
+
+@enduml

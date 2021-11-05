@@ -1,0 +1,16 @@
+@startuml new_system_highlevel
+
+allow_mixing
+
+package midterm.client.view #DDDDDD
+package midterm.client.controller #DDDDDD
+
+package midterm.server.model #DDDDDD
+package midterm.server.controller #DDDDDD
+
+midterm.server.controller ..> midterm.server.model
+midterm.client.controller ..> midterm.client.view
+
+midterm.client.controller .. midterm.server.controller
+
+@enduml

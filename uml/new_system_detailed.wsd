@@ -1,0 +1,36 @@
+@startuml new_system_detailed
+
+allow_mixing
+
+package midterm.client.view #DDDDDD
+{
+    class StringView
+}
+
+package midterm.client.controller #DDDDDD
+{
+    class ClientApp
+    class ClientStringController
+
+    ClientApp *-- ClientStringController
+    ClientStringController *-- StringView
+}
+
+package midterm.server.model #DDDDDD
+{
+    class StringModel
+}
+
+package midterm.server.controller #DDDDDD
+{
+    class ServerApp
+    class ServerStringController
+
+    ServerApp *-- StringModel
+    ServerApp *-- ServerStringController
+    ServerStringController o-- StringModel
+}
+
+ServerApp "communication via socket" .. ClientStringController
+
+@enduml
