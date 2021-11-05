@@ -1,3 +1,5 @@
+package midterm.server.model;
+
 public class StringModel {
     private String myString;
 
