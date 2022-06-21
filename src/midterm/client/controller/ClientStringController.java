@@ -36,13 +36,16 @@ public class ClientStringController {
     class StringListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent arg0) {
-            String first, sec;
+            String first, sec, strCase;
 
             try {
                 first = theView.getFirstString();
                 sec = theView.getSecString();
+                strCase = theView.getStringCase();
+
                 socketOut.println(first);
                 socketOut.println(sec);
+                socketOut.println(strCase);
             }
 
             catch (Exception ex) {

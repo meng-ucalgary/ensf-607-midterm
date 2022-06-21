@@ -33,8 +33,20 @@ public class ServerStringController implements Runnable {
             while (true) {
                 String str1 = this.socketIn.readLine();
                 String str2 = this.socketIn.readLine();
+                String strCase = this.socketIn.readLine();
 
-                this.theModel.concatenate(str1, str2);
+                if (strCase == null || strCase.equals("")) {
+                    this.theModel.concatenate(str1, str2);
+                }
+
+                else if (strCase.equals("lower")) {
+                    this.theModel.concatenateWithLower(str1, str2);
+                }
+
+                else {
+                    this.theModel.concatenateWithUpper(str1, str2);
+                }
+
                 this.socketOut.println(this.theModel.getMyString());
             }
         }
